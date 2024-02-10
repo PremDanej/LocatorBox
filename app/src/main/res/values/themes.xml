@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.LocatorBox" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/sky_700</item>
+        <item name="colorPrimaryVariant">@color/sky_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="android:textColor">@color/sky_900</item>
+        <item name="fontFamily">@font/sen_regular</item>
+        <item name="android:includeFontPadding">false</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="CommonScreenStyle" parent="Theme.LocatorBox">
+        <item name="android:statusBarColor">@color/backColor</item>
+        <item name="backgroundColor">@color/backColor</item>
+    </style>
+</resources>

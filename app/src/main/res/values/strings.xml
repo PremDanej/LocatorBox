@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LocatorBox</string>
+
+    <string-array name="categoryArray">
+        <item>Smartphone</item>
+    </string-array>
+</resources>
