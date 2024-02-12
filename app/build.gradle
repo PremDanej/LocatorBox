@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -29,6 +30,9 @@ android {
     viewBinding {
         enable true
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -46,9 +50,13 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     implementation 'com.squareup.picasso:picasso:2.8'
-
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
     implementation 'com.intuit.ssp:ssp-android:1.1.0'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // Map
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-location:21.1.0'
+
 
 }

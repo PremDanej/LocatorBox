@@ -6,10 +6,11 @@
     android:background="@color/white">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_10sdp"
         android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_2sdp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +23,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-
             <ImageView
                 android:id="@+id/imgThumb"
                 android:layout_width="@dimen/_140sdp"
@@ -32,7 +32,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:textSize="@dimen/_11ssp"
                 android:id="@+id/txtName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -41,6 +40,7 @@
                 android:maxLines="1"
                 android:paddingStart="@dimen/_3sdp"
                 android:text="@string/app_name"
+                android:textSize="@dimen/_11ssp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -88,5 +88,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

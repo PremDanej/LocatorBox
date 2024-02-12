@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.MapsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/lbl_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/lbl_find_location"
+            android:textSize="@dimen/_18ssp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/sky_900" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:cameraTilt="30"
+            map:uiRotateGestures="true"
+            map:uiZoomControls="true" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            map:backgroundTint="@color/backColor"
+            android:contentDescription="@string/lbl_location"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:src="@drawable/ic_location" />
+
+    </FrameLayout>
+
+</LinearLayout>

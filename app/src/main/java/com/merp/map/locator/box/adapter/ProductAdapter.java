@@ -22,11 +22,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     private List<Product> mainList;
     private List<Product> list;
-    private onProductClick listener;
+    private final onProductClick listener;
 
     public ProductAdapter(onProductClick listener) {
-        this.mainList = new ArrayList<>();
-        this.list = new ArrayList<>();
         this.listener = listener;
     }
 
@@ -46,7 +44,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
         holder.binding.txtPrice.setText(setPrice(item.getPrice()));
         holder.binding.rate.setRating(item.getRating().floatValue());
 
-        holder.binding.imgThumb.setOnClickListener(view -> {
+        holder.binding.cardProduct.setOnClickListener(view -> {
             listener.onProductItemClick(item.getId());
         });
     }
@@ -66,6 +64,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @SuppressLint("NotifyDataSetChanged")
     public void updateList(List<Product> products) {
+        mainList = new ArrayList<>();
+        list = new ArrayList<>();
         mainList.addAll(products);
         list.addAll(products);
         notifyDataSetChanged();

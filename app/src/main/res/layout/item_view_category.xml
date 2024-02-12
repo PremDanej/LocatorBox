@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_170sdp"
-        android:layout_marginHorizontal="@dimen/_10sdp"
-        android:layout_marginVertical="16dp"
+        android:id="@+id/categoryCard"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="7dp"
+        app:cardCornerRadius="@dimen/_2sdp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:strokeWidth=".5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth=".1dp">
+        app:strokeColor="@color/shimmerColor">
 
-        <ImageView
-            android:id="@+id/imgSlider"
+        <TextView
+            android:id="@+id/txtCategory"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:text="@string/app_name" />
 
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

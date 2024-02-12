@@ -4,4 +4,13 @@
     <string-array name="categoryArray">
         <item>Smartphone</item>
     </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="lbl_find_location">Find Location</string>
+    <string name="lbl_map_task">Map Task</string>
+    <string name="lbl_location">Location</string>
+    <string name="lbl_back">Back</string>
+    <string name="lbl_search">Search</string>
+    <string name="msg_current_location">Current Location</string>
+    <string name="msg_please_turn_on_gps">Please turn on GPS</string>
+    <string name="msg_permission_denied">Permission denied</string>
 </resources>

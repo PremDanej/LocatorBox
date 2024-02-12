@@ -1,5 +1,7 @@
 package com.merp.map.locator.box.ui;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
@@ -10,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.window.OnBackInvokedDispatcher;
 
 import com.merp.map.locator.box.R;
 import com.merp.map.locator.box.adapter.SliderAdapter;
@@ -39,8 +42,22 @@ public class ProductDetailActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         onInit();
 
-        binding.imgBack.setOnClickListener(view -> finish());
+        binding.imgBack.setOnClickListener(view -> onGoBack());
+
+        // Handle backPressed
+        getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                onGoBack();
+            }
+        });
     }
+
+    private void onGoBack() {
+        finish();
+        overridePendingTransition(R.anim.anim_left_to_right, R.anim.anim_right_to_left);
+    }
+
 
     private void onInit() {
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
@@ -82,7 +99,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         dotscount = adapter.getCount();
         dots = new ImageView[dotscount];
 
-        for(int i = 0; i < dotscount; i++){
+        for (int i = 0; i < dotscount; i++) {
             dots[i] = new ImageView(this);
             dots[i].setImageDrawable(onSetImageDrawable(R.drawable.ic_in_active_dot));
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -119,6 +136,6 @@ public class ProductDetailActivity extends AppCompatActivity {
     }
 
     private String setDiscount(Double discount) {
-        return discount +"% off";
+        return discount + "% off";
     }
 }

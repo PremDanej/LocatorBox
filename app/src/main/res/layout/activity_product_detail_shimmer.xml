@@ -40,7 +40,6 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@color/shimmerColor" />
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_18sdp"
@@ -52,7 +51,6 @@
         android:layout_height="@dimen/_22sdp"
         android:layout_marginTop="@dimen/_6sdp"
         android:background="@color/shimmerColor" />
-
 
     <TextView
         android:layout_width="@dimen/_60sdp"
@@ -77,5 +75,4 @@
             android:background="@color/shimmerColor" />
 
     </LinearLayout>
-
 </LinearLayout>

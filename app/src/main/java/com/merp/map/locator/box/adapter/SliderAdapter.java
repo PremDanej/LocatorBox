@@ -27,7 +27,7 @@ public class SliderAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        ItemViewImageSliderBinding binding = ItemViewImageSliderBinding.inflate(LayoutInflater.from(container.getContext()),container,false);
+        ItemViewImageSliderBinding binding = ItemViewImageSliderBinding.inflate(LayoutInflater.from(container.getContext()), container, false);
         Picasso.get().load(images.get(position)).fit().into(binding.imgSlider);
         container.addView(binding.getRoot());
         return binding.getRoot();
